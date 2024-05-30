@@ -1,12 +1,5 @@
-import java.util.*;
-
-class Job {
-    char id;
-    int deadline, profit;
-
-    public Job(char id, int deadline, int profit) {
-        this.id = id;
-        this.deadline = deadline;
-        this.profit = profit;
+class JobComparator implements Comparator<Job> {
+    public int compare(Job a, Job b) {
+        return b.profit - a.profit;
     }
 }
